@@ -1,0 +1,26 @@
+variables:
+    GIT_SSL_NO_VERIFY: "true"
+    GIT_SUBMODULE_STRATEGY: recursive
+
+before_script:
+    - docker info
+
+stages:
+    - before_build
+    - build
+
+code_quality:
+    stage: before_build
+    image: python:latest
+    before_script:
+        - python -V
+    script:
+        - pip install flake8
+        - flake8
+
+build_image:
+    stage: build
+    script:
+        - docker-compose build
+    tags:
+        - shell

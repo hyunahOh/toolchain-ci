@@ -1,0 +1,3 @@
+[submodule "face-recognition-inference/backend"]
+	path = face-recognition-inference/backend
+	url = ../../haoh/mlflow-hyperopts-keras

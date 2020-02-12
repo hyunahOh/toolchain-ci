@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title>Face Recognition</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">(대충 웹앱 이름)</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown link
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+</nav>
+
+<div id="container" class="container" style="padding-top: 32px;">
+
+    <div class="jumbotron">
+        <h1 class="display-4">케이-셀럽 레코그니션</h1>
+        <p class="lead">대한민국에서 활동중인 연예인들의 얼굴을 인식합니다.</p>
+        <hr class="my-4">
+        <p>사실 4명밖에 인식 못하니까 데모 이미지는 신중하게 선택해주세요.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">더 알아보기</a>
+      </div>
+
+{% if messages %}
+<h2>{{ messages }}</h2>
+{% endif %}
+
+<form action="/upload" enctype="multipart/form-data" method="POST" style="padding: 32px;">
+    <div class="form-group">
+      <h2 for="image" style="padding-bottom: 16px;">사진 선택</h2>
+      <input accept="image/*" type="file" class="form-control-file" id="image" name="image" aria-describedby="imageHelp">
+      <small id="imageHelp" class="form-text text-muted">얼굴을 인식하고자 하는 사진을 골라주세요.</small>
+    </div>
+    <div align="right">
+        <button type="submit" class="btn btn-primary" >얼굴 인식하기</button>
+    </div>
+</form>
+</div>
+</body>
+</html>
