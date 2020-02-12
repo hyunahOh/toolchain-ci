@@ -6,11 +6,10 @@ before_script:
     - docker info
 
 stages:
-    - before_build
     - build
 
 code_quality:
-    stage: before_build
+    stage: build
     image: python:latest
     before_script:
         - python -V
