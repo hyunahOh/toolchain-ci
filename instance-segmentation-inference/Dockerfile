@@ -2,11 +2,13 @@ FROM python:3.6
 
 RUN pip install cmake && \
     pip install \
+    cython==0.29.15 \
+    torch==1.4.0 \
+    torchvision==0.5.0 \
+    pycocotools==2.0.0 \
+    matplotlib==3.1.3 \
     numpy==1.18.1 \
-    opencv-python==3.4.0.12 \
-    keras==2.3.0 \
-    tensorflow==1.14.0 \
-    dlib==19.19.0
+    opencv-python==4.2.0.32
 RUN pip install flask pillow
     
 
