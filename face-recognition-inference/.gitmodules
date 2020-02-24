@@ -1,3 +1,0 @@
-[submodule "backend"]
-	path = backend
-	url = https://smr.snu.ac.kr:30005/haoh/mlflow-hyperopts-keras
