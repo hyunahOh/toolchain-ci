@@ -1,9 +1,3 @@
-[submodule "instance-segmentation-inference/backend"]
-	path = instance-segmentation-inference/backend
-	url = ../../haoh/instance_segmentation
-[submodule "instance_segmentation_inference/toolchain-ci"]
-	path = instance_segmentation_inference/toolchain-ci
-	url = ssh://git@smr.snu.ac.kr:30006/haoh/toolchain-ci.git
 [submodule "instance_segmentation_inference/instance_segmentation"]
 	path = instance_segmentation_inference/instance_segmentation
 	url = https://smr.snu.ac.kr:30005/haoh/instance_segmentation.git
