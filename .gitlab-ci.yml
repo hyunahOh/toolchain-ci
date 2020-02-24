@@ -16,9 +16,13 @@ code_quality:
     script:
         - pip install flake8
         - flake8
+    tags:
+        - docker
 
 build_image:
     stage: build
+    before_script:
+        - pip install docker-compose
     script:
         - docker-compose build
     tags:
